@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f3efe9">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Собери LILIAN</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="brand" type="button" data-go="intro" aria-label="На главную">
+        <span class="brand__name">LILIAN</span>
+        <span class="brand__by">by Rubia &amp; Morena</span>
+      </button>
+      <div class="progress" aria-label="Прогресс">
+        <span class="progress__dot is-active"></span>
+        <span class="progress__dot"></span>
+        <span class="progress__dot"></span>
+      </div>
+    </header>
+
+    <main>
+      <section class="screen is-active" data-screen="intro">
+        <div class="intro-copy">
+          <p class="eyebrow">Танго-гардероб как живая система</p>
+          <h1>Не листай.<br>Собери свою ситуацию.</h1>
+          <p class="lead">Скажи, куда ты идёшь и как любишь выбирать. Мы покажем несколько реальных вариантов LILIAN — дальше ты решишь сама.</p>
+        </div>
+        <div class="hero-stack" aria-hidden="true">
+          <figure class="hero-card hero-card--back"><img src="assets/images/fig-wine-front.jpg" alt=""></figure>
+          <figure class="hero-card hero-card--mid"><img src="assets/images/cape-motion.jpg" alt=""></figure>
+          <figure class="hero-card hero-card--front"><img src="assets/images/lilian-navy-pose.jpg" alt=""></figure>
+          <span class="paper-tag paper-tag--one">практика</span>
+          <span class="paper-tag paper-tag--two">милонга</span>
+          <span class="paper-tag paper-tag--three">марафон</span>
+        </div>
+        <div class="screen-actions">
+          <button class="button button--primary" type="button" data-go="occasion">Собрать мой LILIAN</button>
+          <p class="micro">Без регистрации. Посадку, ткань, цвет, цену и срок подтвердит команда LILIAN.</p>
+        </div>
+      </section>
+
+      <section class="screen" data-screen="occasion">
+        <div class="section-head">
+          <button class="back" type="button" data-go="intro">←</button>
+          <div>
+            <p class="eyebrow">Шаг 1</p>
+            <h2>Куда ты собираешься?</h2>
+          </div>
+        </div>
+        <div class="choice-grid choice-grid--occasions">
+          <button class="choice-card" type="button" data-occasion="practice">
+            <span class="choice-card__index">01</span>
+            <strong>Практика / урок</strong>
+            <span>Хочу двигаться, работать и не думать об одежде.</span>
+          </button>
+          <button class="choice-card" type="button" data-occasion="milonga">
+            <span class="choice-card__index">02</span>
+            <strong>Милонга</strong>
+            <span>Хочу цельный образ и свободу танца.</span>
+          </button>
+          <button class="choice-card" type="button" data-occasion="marathon">
+            <span class="choice-card__index">03</span>
+            <strong>Марафон / поездка</strong>
+            <span>Нужна компактная капсула на несколько выходов.</span>
+          </button>
+          <button class="choice-card" type="button" data-occasion="performance">
+            <span class="choice-card__index">04</span>
+            <strong>Готовлюсь к выступлению</strong>
+            <span>Хочу обживаться в форме ещё до сцены.</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="screen" data-screen="mode">
+        <div class="section-head">
+          <button class="back" type="button" data-go="occasion">←</button>
+          <div>
+            <p class="eyebrow">Шаг 2</p>
+            <h2>Как тебе удобнее выбирать?</h2>
+          </div>
+        </div>
+        <div class="mode-list">
+          <button class="mode-card" type="button" data-mode="whole">
+            <span class="mode-card__visual"><img src="assets/images/lilian-navy-pose.jpg" alt=""></span>
+            <span class="mode-card__copy"><strong>Цельный образ</strong><small>Платье — меньше решений, сразу целое.</small></span>
+            <span class="mode-card__arrow">→</span>
+          </button>
+          <button class="mode-card" type="button" data-mode="mix">
+            <span class="mode-card__visual"><img src="assets/images/fig-wine-front.jpg" alt=""></span>
+            <span class="mode-card__copy"><strong>Хочу комбинировать</strong><small>Верх и низ можно выбирать и докупать отдельно.</small></span>
+            <span class="mode-card__arrow">→</span>
+          </button>
+          <button class="mode-card" type="button" data-mode="both">
+            <span class="mode-card__visual mode-card__visual--split"><img src="assets/images/cape-motion.jpg" alt=""><img src="assets/images/fig-wine-shadow.jpg" alt=""></span>
+            <span class="mode-card__copy"><strong>Покажите разное</strong><small>Сравню цельный силуэт и вариативную капсулу.</small></span>
+            <span class="mode-card__arrow">→</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="screen" data-screen="results">
+        <div class="section-head section-head--results">
+          <button class="back" type="button" data-go="mode">←</button>
+          <div>
+            <p class="eyebrow">Твой результат</p>
+            <h2 id="result-title">Собрали три варианта</h2>
+          </div>
+        </div>
+        <p class="result-context" id="result-context"></p>
+        <div class="result-list" id="result-list"></div>
+
+        <section class="brief-card">
+          <p class="eyebrow">Для разговора с LILIAN</p>
+          <h3>Добавь только то, что уже знаешь</h3>
+          <div class="brief-row">
+            <label class="field"><span>Размер</span>
+              <select id="brief-size">
+                <option value="">Не знаю / обсудим</option>
+                <option>S</option><option>M</option><option>L</option>
+              </select>
+            </label>
+            <label class="field"><span>Рост, см</span><input id="brief-height" inputmode="numeric" pattern="[0-9]*" placeholder="например, 170"></label>
+          </div>
+          <label class="field field--full"><span>Что важно уточнить</span>
+            <textarea id="brief-note" rows="3" placeholder="цвет, длина, ткань, срок, посадка…"></textarea>
+          </label>
+          <button class="button button--primary" type="button" id="contact-button">Обсудить выбранный образ</button>
+          <p class="micro">Размер, посадку, актуальные цвета, материалы, цену и срок подтверждает команда LILIAN.</p>
+        </section>
+
+        <button class="button button--ghost" type="button" data-restart>Собрать заново</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
